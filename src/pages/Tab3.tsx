@@ -19,12 +19,17 @@ const Tab3: React.FC = () => {
                   <IonCardTitle>BYD</IonCardTitle>
                   <IonCardSubtitle></IonCardSubtitle>
                 </IonCardHeader>
+                
+                <IonCardContent><b>Ubicacion:</b> Fontibón</IonCardContent>
+                <IonCardContent><b>Costo semanal:</b> $200.000</IonCardContent>
+
                 <div className='cartaD'>
                 <IonCardContent>Metodos de pago:</IonCardContent>
                 <div className='imanegenesTarjetas'>
-                  <img className="pagos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/2560px-Mastercard-logo.svg.png" alt="" />
+                <img className="pagos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/2560px-Mastercard-logo.svg.png" alt="" />
                   <img className="pagos" src="https://1000marcas.net/wp-content/uploads/2019/12/VISA-Logo.png" alt="" />
                   <img className="pagos" src="https://seeklogo.com/images/N/nequi-logo-58FBE82BA6-seeklogo.com.png" alt="" />
+
                 </div>
                 <IonButton id="present-alert">Reservar</IonButton>
                   <IonAlert
@@ -33,13 +38,16 @@ const Tab3: React.FC = () => {
                     buttons={['OK']}
                     inputs={[
                       {
-                        placeholder: 'Name',
+                        placeholder: 'Nombre',
                       },
                       {
-                        placeholder: 'Nickname (max 8 characters)',
+                        placeholder: 'Correo',
+                      },
+                      {
+                        placeholder: 'Numero Telefonico',
                         attributes: {
-                          maxlength: 8,
-                        },
+                          maxlength: 12,
+                        }
                       },
                       {
                         type: 'number',
