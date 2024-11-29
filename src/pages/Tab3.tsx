@@ -6,9 +6,11 @@ const Tab3: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 3</IonTitle>
-        </IonToolbar>
+        <div className="header">
+          <IonToolbar>
+            <IonTitle class="title">Electric Rent</IonTitle>
+          </IonToolbar>
+        </div>
       </IonHeader>
       <IonContent fullscreen>
         <div className='Principal'>
@@ -34,8 +36,24 @@ const Tab3: React.FC = () => {
                 <IonButton id="present-alert">Reservar</IonButton>
                   <IonAlert
                     trigger="present-alert"
-                    header="Please enter your info"
-                    buttons={['OK']}
+                    header="Ingresa tus datos:"
+                    buttons={[
+                      {
+                        text: 'Cancelar',
+                        role: 'cancel',
+                        handler: () => {
+                          console.log('Alert canceled');
+                        },
+                      },
+                      {
+                        text: 'Reservar',
+                        role: 'confirm',
+                        handler: () => {
+                          console.log('Alert confirmed');
+                        },
+                      },
+                    ]}
+
                     inputs={[
                       {
                         placeholder: 'Nombre',
@@ -57,11 +75,32 @@ const Tab3: React.FC = () => {
                       },
                       {
                         type: 'textarea',
-                        placeholder: 'A little about yourself',
+                        placeholder: 'Descirpcion sobre el viaje',
                       },
                       {
-                        type: "date"
-                      }
+                        type: 'text',
+                        placeholder: 'Fecha de Entrega',
+                        attributes: {
+                          onFocus: (e: React.FocusEvent<HTMLInputElement>) => {
+                            (e.target as HTMLInputElement).type = 'date';
+                          },
+                          onBlur: (e: React.FocusEvent<HTMLInputElement>) => {
+                            (e.target as HTMLInputElement).type = 'text';
+                          },
+                        },
+                      },
+                      {
+                        type: 'text',
+                        placeholder: 'Fecha de Devolucion',
+                        attributes: {
+                          onFocus: (e: React.FocusEvent<HTMLInputElement>) => {
+                            (e.target as HTMLInputElement).type = 'date';
+                          },
+                          onBlur: (e: React.FocusEvent<HTMLInputElement>) => {
+                            (e.target as HTMLInputElement).type = 'text';
+                          },
+                        },
+                      },
                     ]}
                   ></IonAlert>
                 </div>

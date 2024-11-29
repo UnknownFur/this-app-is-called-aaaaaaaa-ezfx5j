@@ -44,7 +44,8 @@ ion-content{
     font-size: 36px;
     color: aqua;
     transition: 200ms;
-    height: 50px;
+    height: 60px;
+    width: 300px;
 }
 .rent-button:hover{
     opacity: 20%;
@@ -57,7 +58,7 @@ ion-content{
         height: 10vh;
         border-radius: 20px;
     }
-    .center-container{
+    .center-container1{
         flex-direction: column-reverse;
     }
 }
