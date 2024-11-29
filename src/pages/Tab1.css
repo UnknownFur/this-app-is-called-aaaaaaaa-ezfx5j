@@ -3,7 +3,7 @@
 .header{
     text-align: center;
 }
-.center-container{
+.center-container1{
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -31,6 +31,7 @@ ion-content{
     width: 15vh;
     height: 15vh;
     border-radius: 20px;
+    object-fit: cover;
 }
 .buttons{
     margin: 5%;

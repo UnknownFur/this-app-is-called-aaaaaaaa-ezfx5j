@@ -1,0 +1,41 @@
+.Principal{
+    display: flex;
+    align-items: center;
+}
+.carta{
+    width: 520px;
+}
+.carta .Iauto{
+    width: 520px;
+    height: 320px;
+    object-fit: cover;
+    padding: 15px;
+}
+.cartaD{
+    display: flex;
+    flex-direction: column;
+}
+.imanegenesTarjetas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.pagos{
+    width: 50px;
+    margin: 10px;
+}
+#present-alert{
+    transform: scale(90%);
+    transition: 600ms;
+}
+#present-alert:hover{
+    opacity: 20%;
+    transform: scale(100%);
+    transition: 600ms;
+}
+@media only screen and (min-width: 0px) and (max-width: 800px){
+    .Principal{
+        flex-direction: column;
+    }
+}

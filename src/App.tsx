@@ -74,10 +74,6 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={ellipse} />
             <IonLabel>Rent</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel></IonLabel>
-          </IonTabButton>
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
